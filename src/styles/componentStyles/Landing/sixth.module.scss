@@ -1,0 +1,249 @@
+@import "src/styles/mixins.scss";
+
+.sixth {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    @include width-restriction;
+
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 113.69rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.14rem;
+
+        background-image: url("/static/img/sixthBg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        margin-bottom: 13.69rem;
+
+        padding: 6.84rem 6.42rem;
+
+        &>h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 5.13rem;
+            line-height: 5.99rem;
+            text-transform: uppercase;
+        }
+
+        &__cards {
+            display: flex;
+            gap: 5.3rem;
+        }
+    }
+}
+
+.plan {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.56rem;
+
+    background: rgba(120, 120, 120, 0.2);
+    backdrop-filter: blur(7.5px);
+
+    max-width: 34.58rem;
+    height: 89.78rem;
+
+    &__image {
+        position: relative;
+        width: 34.58rem;
+        height: 27.39rem;
+    }
+
+    &__content {
+        padding: 2.56rem 3.47rem;
+        padding-top: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3.42rem;
+
+        height: 100%;
+        opacity: .6;
+
+        &__top {
+            display: flex;
+            flex-direction: column;
+            gap: 1.71rem;
+
+            &__price {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .86rem;
+
+                &>span {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    font-size: 2.56rem;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
+
+                &>h4 {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 3.85rem;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                gap: .86rem;
+
+                &>div {
+                    display: flex;
+                    gap: 1.9rem;
+                    align-items: center;
+                    padding-bottom: .86rem;
+                    border-bottom: 1px solid #fff;
+
+                    &>p {
+                        width: 25.34rem;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                        font-size: 1.54rem;
+                        line-height: 120%;
+                    }
+                }
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 1.71rem;
+            align-items: center;
+
+            &>span {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 1.71rem;
+                line-height: 120%;
+                text-transform: uppercase;
+
+                &>span {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 2.56rem;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
+            }
+
+            &>button {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 1.54rem;
+                line-height: 120%;
+
+                background: rgba(120, 120, 120, 0.3);
+                backdrop-filter: blur(7.5px);
+
+                padding: 1.2rem 11.04rem;
+                transition: all .3s;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+.coolPlan {
+    display: flex;
+    flex-direction: column;
+    gap: 2.56rem;
+
+    padding-top: 0;
+
+    background: rgba(120, 120, 120, 0.2);
+    backdrop-filter: blur(7.5px);
+
+    max-width: 44.34rem;
+    height: 92.55rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    &__image {
+        position: relative;
+        width: 44.34rem;
+        height: 36.55rem;
+    }
+
+    &__content {
+        padding: 3.42rem 4.62rem;
+        padding-top: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4.02rem;
+
+        height: 100%;
+        opacity: 1;
+
+        &__top {
+            &__price {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.24rem;
+
+                &>span {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    font-size: 2.56rem;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
+
+                &>h4 {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 3.85rem;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+
+                &>div {
+                    display: flex;
+                    gap: 1.9rem;
+                    align-items: center;
+                    padding-bottom: 1.2rem;
+                    border-bottom: 1px solid #fff;
+
+                    &>p {
+                        width: 25.34rem;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                        font-size: 1.54rem;
+                        line-height: 120%;
+                    }
+                }
+            }
+        }
+    }
+
+}

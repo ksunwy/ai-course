@@ -1,0 +1,163 @@
+@import "src/styles/mixins.scss";
+
+.second {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    gap: 3.42rem;
+
+    margin-top: 8.56rem;
+
+    @include width-restriction;
+
+    &__blur {
+        position: absolute;
+        top: 23.13rem;
+        left: -20%;
+        
+        &__image {
+            position: relative;
+            width: 82.36rem;
+            height: 65.58rem;
+
+            transform: rotate(21.31deg);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(abstract-art-design-background-with-wave-3d-render.png);
+            // opacity: 0.5;
+            filter: blur(150px);
+            z-index: 1;
+        }
+    }
+
+    &__smallBlur {
+        position: absolute;
+        bottom: -37%;
+        left: 0;
+
+        &__image {
+            position: relative;
+            width: 82.36rem;
+            height: 65.58rem;
+
+            // transform: rotate(21.31deg);
+            // background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(abstract-art-design-background-with-wave-3d-render.png);
+            // // opacity: 0.5;
+            // filter: blur(150px);
+            z-index: 1;
+        }
+    }
+
+    &__left {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 6.67rem;
+
+        margin-top: 1.71rem;
+        z-index: 999;
+
+        &>span {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-size: 1.54rem;
+            line-height: 120%;
+        }
+
+        &__content {
+            width: fit-content;
+            display: flex;
+            gap: 3.42rem;
+        }
+    }
+
+    &__right {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 4.28rem;
+        margin-bottom: 13.69rem;
+        z-index: 999;
+
+        &>h2 {
+            font-weight: 300;
+            font-size: 5.13rem;
+            line-height: 5.99rem;
+            text-transform: uppercase;
+        }
+
+        &__content {
+            display: flex;
+            gap: 3.42rem;
+
+            &__left {
+                display: flex;
+                flex-direction: column;
+                gap: 2.14rem;
+
+                &>p {
+                max-width: 30.30rem;
+                font-weight: 400;
+                font-size: 1.71rem;
+                line-height: 120%;
+                }
+
+                &__image {
+                    position: relative;
+                    width: 30.30rem;
+                    height: 49.22rem;
+                }
+            }
+        }
+    }
+}
+
+.infoCard {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2.14rem;
+
+    &__image {
+        position: relative;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: .68rem;
+
+        &>h3 {
+            max-width: 28.25rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 2.56rem;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
+
+        &>p {
+            max-width: 26.82rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+            font-size: 1.54rem;
+            line-height: 120%;
+            /* or 22px */
+            letter-spacing: -1px;
+        }
+    }
+}
+
+.firstImage {
+    width: 27.85rem;
+    height: 27.05rem;
+}
+
+.secondImage {
+    width: 27.85rem;
+    height: 43.49rem;
+}
+
+.fourthImage {
+    width: 27.85rem;
+    height: 30.05rem;
+}

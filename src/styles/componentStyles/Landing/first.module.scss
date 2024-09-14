@@ -1,0 +1,87 @@
+@import "src/styles/mixins.scss";
+
+.first {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15.92rem;
+
+    margin-bottom: 5.13rem;
+
+    &__blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &__image {
+            position: relative;
+            width: 82.36rem;
+            height: 65.58rem;
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 106.67rem;
+        height: 30.82rem;
+
+        margin-top: 29.96rem;
+    }
+
+    &__content {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 20.11rem;
+
+        &>h1 {
+            max-width: 64.32rem;
+
+            font-weight: 200;
+            font-size: 3.42rem;
+            line-height: 4.02rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            @media screen and (850px < width <= 1649px) {
+                max-width: 68.32rem;
+            }
+        }
+
+        &__top {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &__image {
+                position: relative;
+                width: 105.05rem;
+                height: 10.87rem;
+            }
+        }
+
+        &__bottom {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            &__image {
+                position: relative;
+                width: 105.05rem;
+                height: 10.87rem;
+            }
+        }
+    }
+}
+
+.marks {
+    position: relative;
+    width: 1.54rem;
+    height: 1.54rem;
+}

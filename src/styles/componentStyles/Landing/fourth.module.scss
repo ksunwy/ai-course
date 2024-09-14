@@ -1,0 +1,120 @@
+@import "src/styles/mixins.scss";
+
+.fourth {
+    position: relative;
+
+    display: flex;
+    gap: 3.42rem;
+    justify-content: center;
+
+    @include width-restriction;
+
+    &__blur {
+        position: absolute;
+        top: 0;
+        left: -10%;
+
+        &__image {
+            position: relative;
+            width: 82.36rem;
+            height: 65.58rem;
+            transform: rotate(180deg);
+            z-index: 1;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 3.08rem;
+        margin-bottom: 13.69rem;
+        z-index: 999;
+
+        &>button {
+            width: fit-content;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 2.14rem;
+            line-height: 120%;
+
+            background: rgba(120, 120, 120, 0.2);
+            backdrop-filter: blur(7.5px);
+
+            padding: 2.56rem 6.16rem;
+            transition: all .3s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 4.28rem;
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                gap: 2.14rem;
+            }
+
+            &>h2 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 5.13rem;
+                line-height: 5.99rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        z-index: 999;
+
+        &__image {
+            position: relative;
+            width: 59.93rem;
+            height: 83.13rem;
+        }
+    }
+}
+
+.item {
+    display: flex;
+    gap: 1.38rem;
+
+    padding-bottom: 2.14rem;
+
+    min-width: 59.07rem;
+    border-bottom: 1px solid #6C6C6C;
+
+    &>span {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 2.14rem;
+        line-height: 120%;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: .86rem;
+
+        &>h4 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 2.56rem;
+            line-height: 120%;
+        }
+
+        &>p {
+            max-width: 49.65rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 2.14rem;
+            line-height: 120%;
+        }
+    }
+}

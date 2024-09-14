@@ -1,0 +1,120 @@
+@import "src/styles/mixins.scss";
+
+.third {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    @include width-restriction;
+
+    &__blur {
+        position: absolute;
+        top: 0;
+        right: -10%;
+
+        &__image {
+            position: relative;
+            width: 82.36rem;
+            height: 65.58rem;
+            z-index: 1;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 4.28rem;
+
+        margin-top: 4.1rem;
+        margin-bottom: 13.69rem;
+        z-index: 999;
+
+        &>span {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-size: 1.54rem;
+            line-height: 120%;
+        }
+
+        &__table {
+            display: flex;
+
+            &__left {
+                display: flex;
+                flex-direction: column;
+
+                &__image {
+                    position: relative;
+                    width: 31.25rem;
+                    height: 22.6rem;
+                }
+            }
+
+            &__right {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 4.28rem;
+        z-index: 999;
+
+        &>h2 {
+            font-weight: 300;
+            font-size: 5.13rem;
+            line-height: 5.99rem;
+            text-transform: uppercase;
+        }
+
+        &__table {
+            display: flex;
+
+            &__left {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &__right {
+                display: flex;
+                flex-direction: column;
+
+                margin-top: 22.6rem;
+            }
+        }
+    }
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 31.25rem;
+    height: 22.6rem;
+
+    border: 1px solid #929292;
+
+    padding: 2.56rem 1.71rem;
+
+    &>h4 {
+        // width: 254px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 2.14rem;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+
+    &>p {
+        // width: 325px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 1.54rem;
+        line-height: 120%;
+    }
+}
