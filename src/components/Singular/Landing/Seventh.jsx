@@ -4,7 +4,12 @@ import classes from "../../../styles/componentStyles/Landing/seventh.module.scss
 const Seventh = () => {
     const { t } = useTranslation();
     return (
-        <section className={classes.seventh}>
+        <section id="competition" className={classes.seventh}>
+            <div className={classes.seventh__smallBlur}>
+                <div className={classes.seventh__smallBlur__image}>
+                    <img src="/static/img/smallBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
+                </div>
+            </div>
             <div className={classes.seventh__left}>
                 <span>{t('seventh__desc')} /</span>
                 <div className={classes.seventh__left__images}>
@@ -31,13 +36,13 @@ const Seventh = () => {
                 <div className={classes.seventh__right__bottom}>
                     <div>
                         <span>{t("seventh__place-first")}</span>
-                        <h3>$5000</h3>
+                        <h3>$1500</h3>
                     </div>
                     <div>
                         <span>{t("seventh__place-second")}</span>
                         <h3>$1000</h3>
                     </div>
-                    <div style={{borderBottom: "1px solid #D9D9D9"}}>
+                    <div style={{ borderBottom: "1px solid #D9D9D9" }}>
                         <span>{t("seventh__place-third")}</span>
                         <h3>$500</h3>
                     </div>

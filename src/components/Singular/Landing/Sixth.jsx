@@ -32,7 +32,7 @@ const Sixth = () => {
         { text: `${t('sixth__fifth-list')}` },
     ];
     return (
-        <section className={classes.sixth}>
+        <section id="plans" className={classes.sixth}>
             <div className={classes.sixth__content}>
                 <h2>{t('sixth__title')}</h2>
                 <div className={classes.sixth__content__cards}>

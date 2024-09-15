@@ -5,7 +5,7 @@ import classes from "../../../styles/componentStyles/Landing/second.module.scss"
 const Second = () => {
     const { t } = useTranslation();
   return (
-    <section className={classes.second}>
+    <section id="bases" className={classes.second}>
         <div className={classes.second__blur}>
             <div className={classes.second__blur__image}>
                 <img src="/static/img/firstBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />

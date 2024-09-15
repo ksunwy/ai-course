@@ -5,14 +5,21 @@ import classes from "../../../styles/componentStyles/App/navigation.module.scss"
 const Navigation = () => {
   const { t } = useTranslation();
 
-  const links = [`${t('nav__link-first')}`, `${t('nav__link-second')}`, `${t('nav__link-third')}`, `${t('nav__link-fourth')}`, `${t('nav__link-fifth')}`];
+  const links = [
+    { text: t('nav__link-first'), link: 'relatives'},
+    { text: t('nav__link-second'), link: 'program'},
+    { text: t('nav__link-third'), link: 'plans' },
+    { text: t('nav__link-fourth'), link: 'competition' },
+    { text: t('nav__link-fifth'), link: 'gift' },
+  ];
+
   return (
     <nav className={classes.nav}>
-        <button>{t('nav__left-button')}</button>
-        <ul>
-            {links.map((el, i) => <li key={i}><a href="#" target='_blank'>{el}</a></li>)}
-        </ul>
-        <LanguageSwitcher />
+      <button>{t('nav__left-button')}</button>
+      <ul>
+        {links.map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}
+      </ul>
+      <LanguageSwitcher />
     </nav>
   )
 }

@@ -102,14 +102,15 @@
         flex-direction: column;
         gap: .86rem;
 
-        &>h4 {
+        &__title {
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             font-size: 2.56rem;
             line-height: 120%;
+            text-transform: uppercase;
         }
 
-        &>p {
+        &__text {
             max-width: 49.65rem;
             font-family: 'Roboto', sans-serif;
             font-weight: 300;

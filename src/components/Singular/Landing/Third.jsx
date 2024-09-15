@@ -5,7 +5,7 @@ import classes from "../../../styles/componentStyles/Landing/third.module.scss";
 const Third = () => {
     const { t } = useTranslation();
     return (
-        <section className={classes.third}>
+        <section id="relatives" className={classes.third}>
             <div className={classes.third__blur}>
                 <div className={classes.third__blur__image}>
                     <img src="/static/img/thirdBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
@@ -23,7 +23,7 @@ const Third = () => {
                     <div className={classes.third__left__table__right}>
                         <TableBlock subtitle={t('third__table-second-title')} text={t('third__table-second-desc')} borderRight borderBottom />
                         <TableBlock subtitle={t('third__table-third-title')} text={t('third__table-third-desc')} borderBottom borderLeft />
-                        <TableBlock subtitle={t('third__table-fourth-title')} text={t('third__table-fourth-desc')} />
+                        <TableBlock subtitle={t('third__table-sixth-title')} text={t('third__table-sixth-desc')} />
                     </div>
                 </div>
             </div>
@@ -34,13 +34,13 @@ const Third = () => {
                         <div className={classes.third__left__table__left__image}>
                             <img src="/static/img/third/thirdFirstImage.png" alt="image" width={"100%"} height={"100%"} />
                         </div>
-                        <TableBlock subtitle={t('third__table-fifth-title')} text={t('third__table-fifth-desc')} borderRight />
+                        <TableBlock subtitle={t('third__table-fourth-title')} text={t('third__table-fourth-desc')} borderRight />
                         <div className={classes.third__left__table__left__image}>
                             <img src="/static/img/third/thirdThirdImage.png" alt="image" width={"100%"} height={"100%"} />
                         </div>
                     </div>
                     <div className={classes.third__right__table__right}>
-                        <TableBlock subtitle={t('third__table-sixth-title')} text={t('third__table-sixth-desc')} borderBottom />
+                        <TableBlock titleClasses={classes.lastTitle} subtitle={t('third__table-fifth-title')} text={t('third__table-fifth-desc')} borderBottom />
                         <TableBlock subtitle={t('third__table-seventh-title')} text={t('third__table-seventh-desc')} />
                     </div>
                 </div>

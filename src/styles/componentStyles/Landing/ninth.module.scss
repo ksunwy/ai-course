@@ -1,0 +1,92 @@
+@import "src/styles/mixins.scss";
+
+.ninth {
+    position: relative;
+
+    display: flex;
+    gap: 6.84rem;
+    justify-content: center;
+
+    width: 100%;
+    height: 97.08rem;
+    background-image: url("/static/img/sixthBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 6.16rem;
+    padding-top: 9.76rem;
+
+    margin-bottom: 14.38rem;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 18.75rem;
+
+        &__top {
+            display: flex;
+            flex-direction: column;
+            gap: 5.13rem;
+
+            &>h2 {
+                max-width: 53.68rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 5.13rem;
+                line-height: 5.99rem;
+                text-transform: uppercase;
+                margin-top: .86rem;
+                z-index: 999;
+            }
+
+            &>p {
+                max-width: 41.26rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 2.14rem;
+                line-height: 120%;
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 3.43rem;
+
+            &>p {
+                max-width: 43.32rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 2.14rem;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
+
+            &>button {
+                width: fit-content;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 2.14rem;
+                line-height: 120%;
+
+                background: rgba(120, 120, 120, 0.2);
+                backdrop-filter: blur(7.5px);
+
+                padding: 2.56rem 6.16rem;
+                transition: all .3s;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    &__right {
+        &__image {
+            position: relative;
+            width: 68.66rem;
+            height: 81.16rem;
+        }
+    }
+}
