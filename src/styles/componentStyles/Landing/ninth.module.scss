@@ -18,15 +18,35 @@
 
     margin-bottom: 14.38rem;
 
+    @media screen and (width <= 850px) {
+        height: 759px;
+        margin-bottom: 100px;
+        padding: 40px 10px;
+        gap: 0;
+        align-items: center;
+    }
+
     &__left {
         display: flex;
         flex-direction: column;
         gap: 18.75rem;
 
+        @media screen and (width <= 850px) {
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
         &__top {
             display: flex;
             flex-direction: column;
             gap: 5.13rem;
+
+            @media screen and (width <= 850px) {
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
 
             &>h2 {
                 max-width: 53.68rem;
@@ -37,6 +57,13 @@
                 text-transform: uppercase;
                 margin-top: .86rem;
                 z-index: 999;
+
+                @media screen and (width <= 850px) {
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-align: center;
+                }
             }
 
             &>p {
@@ -45,6 +72,13 @@
                 font-weight: 300;
                 font-size: 2.14rem;
                 line-height: 120%;
+
+                @media screen and (width <= 850px) {
+                    font-weight: 300;
+                    font-size: 13px;
+                    line-height: 120%;
+                    text-align: center;
+                }
             }
         }
 
@@ -53,6 +87,12 @@
             flex-direction: column;
             gap: 3.43rem;
 
+            @media screen and (width <= 850px) {
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+
             &>p {
                 max-width: 43.32rem;
                 font-family: 'Roboto', sans-serif;
@@ -60,6 +100,15 @@
                 font-size: 2.14rem;
                 line-height: 120%;
                 text-transform: uppercase;
+
+                @media screen and (width <= 850px) {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                    letter-spacing: -1px;
+                    opacity: 0.8;
+                }
             }
 
             &>button {
@@ -78,6 +127,13 @@
                 &:hover {
                     opacity: .7;
                 }
+
+                @media screen and (width <= 850px) {
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 120%;
+                    padding: 12px 106px;
+                }
             }
         }
     }
@@ -87,6 +143,16 @@
             position: relative;
             width: 68.66rem;
             height: 81.16rem;
+
+            @media screen and (850px < width <= 1083px) {
+                width: 58.66rem;
+                height: 71.16rem;
+            }
+
+            @media screen and (width <= 850px) {
+                width: 355px;
+                height: 413px;
+            }
         }
     }
 }

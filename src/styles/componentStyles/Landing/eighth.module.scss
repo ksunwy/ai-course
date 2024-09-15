@@ -10,6 +10,10 @@
 
     @include width-restriction;
 
+    @media screen and (width <=850px) {
+        gap: 30px;
+    }
+
     &__smallBlur {
         position: absolute;
         top: -20%;
@@ -57,6 +61,12 @@
         text-transform: uppercase;
         margin-top: .86rem;
         z-index: 999;
+
+        @media screen and (width <=850px) {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 28px;
+        }
     }
 
     &__content {
@@ -93,6 +103,10 @@
 
     background: rgba(120, 120, 120, 0.2);
     backdrop-filter: blur(7.5px);
+
+    @media screen and (850px < width <= 1083px) {
+        width: 46.64rem;
+    }
 
     &__top {
         display: flex;

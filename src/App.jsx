@@ -10,6 +10,7 @@ import Sixth from './components/Singular/Landing/Sixth.jsx';
 import Seventh from './components/Singular/Landing/Seventh.jsx';
 import Eighth from './components/Singular/Landing/Eighth.jsx';
 import Ninth from './components/Singular/Landing/Ninth.jsx';
+import Tenth from './components/Singular/Landing/Tenth.jsx';
 import LastCard from './components/Singular/Landing/LastCard.jsx';
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
       <Seventh />
       <Eighth />
       <Ninth />
+      <Tenth />
       <LastCard />
 
       <Footer />

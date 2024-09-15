@@ -27,17 +27,41 @@
 
         padding: 6.84rem 6.42rem;
 
+        @media screen and (width <=850px) {
+            height: 2298px;
+            margin-bottom: 100px;
+            gap: 30px;
+            padding: 40px 60px;
+        }
+
         &>h2 {
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             font-size: 5.13rem;
             line-height: 5.99rem;
             text-transform: uppercase;
+
+            @media screen and (width <=850px) {
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 28px;
+            }
         }
 
         &__cards {
             display: flex;
             gap: 5.3rem;
+
+            @media screen and (850px < width <=1083px) {
+                gap: 2rem;
+            }
+
+            @media screen and (width <=850px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
         }
     }
 }
@@ -55,10 +79,31 @@
     max-width: 34.58rem;
     height: 89.78rem;
 
+    @media screen and (850px < width <=1083px) {
+        max-width: 27.25rem;
+        height: 90rem;
+    }
+
+    @media screen and (width <=850px) {
+        max-width: 255px;
+        gap: 20px;
+        height: fit-content;
+    }
+
     &__image {
         position: relative;
         width: 34.58rem;
         height: 27.39rem;
+
+        @media screen and (850px < width <=1083px) {
+            width: 27.25rem;
+            height: 20.39rem;
+        }
+
+        @media screen and (width <=850px) {
+            width: 255px;
+            height: 229px;
+        }
     }
 
     &__content {
@@ -73,10 +118,21 @@
         height: 100%;
         opacity: .6;
 
+        @media screen and (width <=850px) {
+            gap: 25px;
+            padding: 25px;
+            padding-top: 0;
+            opacity: 1;
+        }
+
         &__top {
             display: flex;
             flex-direction: column;
             gap: 1.71rem;
+
+            @media screen and (width <=850px) {
+                gap: 20px;
+            }
 
             &__price {
                 display: flex;
@@ -84,12 +140,26 @@
                 align-items: center;
                 gap: .86rem;
 
+                @media screen and (width <=850px) {
+                    gap: 10px;
+                }
+
                 &>span {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 300;
                     font-size: 2.56rem;
                     line-height: 120%;
                     text-transform: uppercase;
+
+                    @media screen and (850px < width <=1083px) {
+                        font-size: 2rem;
+                    }
+
+                    @media screen and (width <=850px) {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 120%;
+                    }
                 }
 
                 &>h4 {
@@ -98,6 +168,16 @@
                     font-size: 3.85rem;
                     line-height: 120%;
                     text-transform: uppercase;
+
+                    @media screen and (850px < width <=1083px) {
+                        font-size: 2.5rem;
+                    }
+
+                    @media screen and (width <=850px) {
+                        font-weight: 400;
+                        font-size: 30px;
+                        line-height: 120%;
+                    }
                 }
             }
 
@@ -106,6 +186,10 @@
                 flex-direction: column;
                 gap: .86rem;
 
+                @media screen and (width <=850px) {
+                    gap: 10px;
+                }
+
                 &>div {
                     display: flex;
                     gap: 1.9rem;
@@ -113,12 +197,48 @@
                     padding-bottom: .86rem;
                     border-bottom: 1px solid #fff;
 
+                    @media screen and (width <=850px) {
+                        gap: 17px;
+                        padding-bottom: 10px;
+                    }
+
+                    &>s {
+                        &>p {
+                            width: 25.34rem;
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 300;
+                            font-size: 1.54rem;
+                            line-height: 120%;
+
+                            @media screen and (850px < width <=1083px) {
+                                font-size: 1.3rem;
+                            }
+
+                            @media screen and (width <=850px) {
+                                font-weight: 300;
+                                font-size: 13px;
+                                line-height: 120%;
+                            }
+                        }
+
+                    }
+
                     &>p {
                         width: 25.34rem;
                         font-family: 'Roboto', sans-serif;
                         font-weight: 300;
                         font-size: 1.54rem;
                         line-height: 120%;
+
+                        @media screen and (850px < width <=1083px) {
+                            font-size: 1.3rem;
+                        }
+
+                        @media screen and (width <=850px) {
+                            font-weight: 300;
+                            font-size: 13px;
+                            line-height: 120%;
+                        }
                     }
                 }
             }
@@ -130,6 +250,10 @@
             gap: 1.71rem;
             align-items: center;
 
+            @media screen and (width <=850px) {
+                gap: 15px;
+            }
+
             &>span {
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
@@ -137,12 +261,24 @@
                 line-height: 120%;
                 text-transform: uppercase;
 
+                @media screen and (width <=850px) {
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 120%;
+                }
+
                 &>span {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 400;
                     font-size: 2.56rem;
                     line-height: 120%;
                     text-transform: uppercase;
+
+                    @media screen and (width <=850px) {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 120%;
+                    }
                 }
             }
 
@@ -158,8 +294,20 @@
                 padding: 1.2rem 11.04rem;
                 transition: all .3s;
 
+                @media screen and (850px < width <=1083px) {
+                    padding: 1.2rem 8.04rem;
+                }
+
                 &:hover {
                     opacity: .7;
+                }
+
+                @media screen and (width <=850px) {
+                    width: 100%;
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 120%;
+                    padding: 6px 71px;
                 }
             }
         }
@@ -180,10 +328,30 @@
     height: 92.55rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
+    @media screen and (850px < width <=1083px) {
+        max-width: 32.25rem;
+    }
+
+    @media screen and (width <=850px) {
+        max-width: 255px;
+        gap: 20px;
+        height: fit-content;
+    }
+
     &__image {
         position: relative;
         width: 44.34rem;
         height: 36.55rem;
+
+        @media screen and (850px < width <=1083px) {
+            width: 32.25rem;
+            height: 25.39rem;
+        }
+
+        @media screen and (width <=850px) {
+            width: 255px;
+            height: 229px;
+        }
     }
 
     &__content {
@@ -198,6 +366,13 @@
         height: 100%;
         opacity: 1;
 
+        @media screen and (width <=850px) {
+            gap: 25px;
+            padding: 25px;
+            padding-top: 0;
+            opacity: 1;
+        }
+
         &__top {
             &__price {
                 display: flex;
@@ -205,12 +380,22 @@
                 align-items: center;
                 gap: 1.24rem;
 
+                @media screen and (width <=850px) {
+                    gap: 10px;
+                }
+
                 &>span {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 300;
                     font-size: 2.56rem;
                     line-height: 120%;
                     text-transform: uppercase;
+
+                    @media screen and (width <=850px) {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 120%;
+                    }
                 }
 
                 &>h4 {
@@ -219,6 +404,12 @@
                     font-size: 3.85rem;
                     line-height: 120%;
                     text-transform: uppercase;
+
+                    @media screen and (width <=850px) {
+                        font-weight: 400;
+                        font-size: 30px;
+                        line-height: 120%;
+                    }
                 }
             }
 
@@ -227,12 +418,42 @@
                 flex-direction: column;
                 gap: 1.2rem;
 
+                @media screen and (width <=850px) {
+                    gap: 10px;
+                }
+
                 &>div {
                     display: flex;
                     gap: 1.9rem;
                     align-items: center;
-                    padding-bottom: 1.2rem;
+                    padding-bottom: .86rem;
                     border-bottom: 1px solid #fff;
+
+                    @media screen and (width <=850px) {
+                        gap: 17px;
+                        padding-bottom: 10px;
+                    }
+
+                    &>s {
+                        &>p {
+                            width: 25.34rem;
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 300;
+                            font-size: 1.54rem;
+                            line-height: 120%;
+
+                            @media screen and (850px < width <=1083px) {
+                                font-size: 1.3rem;
+                            }
+
+                            @media screen and (width <=850px) {
+                                font-weight: 300;
+                                font-size: 13px;
+                                line-height: 120%;
+                            }
+                        }
+
+                    }
 
                     &>p {
                         width: 25.34rem;
@@ -240,6 +461,16 @@
                         font-weight: 300;
                         font-size: 1.54rem;
                         line-height: 120%;
+
+                        @media screen and (850px < width <=1083px) {
+                            font-size: 1.3rem;
+                        }
+
+                        @media screen and (width <=850px) {
+                            font-weight: 300;
+                            font-size: 13px;
+                            line-height: 120%;
+                        }
                     }
                 }
             }

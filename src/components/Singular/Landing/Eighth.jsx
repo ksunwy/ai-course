@@ -16,7 +16,7 @@ const Eighth = () => {
                     <img src="/static/img/eightBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
                 </div>
             </div>
-            <span>{t('eighth__desc')} /</span>
+            <span className="desktop">{t('eighth__desc')} /</span>
             <h2>{t('eighth__title')}</h2>
             <div className={classes.eighth__content}>
                 <div className={classes.eighth__content__left}>

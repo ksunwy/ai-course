@@ -3,7 +3,7 @@ import i18n from 'i18next';
 import { slideDown, slideUp } from '../../../utils/slideFunctions.js';
 import classes from "../../../styles/componentStyles/App/languageSwitcher.module.scss";
 
-function LanguageSwitcher() {
+function LanguageSwitcher({className}) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const dropdownRef = useRef(null);
@@ -41,7 +41,7 @@ function LanguageSwitcher() {
   }, [isDropdownVisible]);
 
   return (
-    <div>
+    <div className={className}>
       <div onClick={toggleDropdown} className={`language-switcher ${classes['language-switcher']}`}>
         <span>{i18n.language === 'ru' ? 'Rus' : 'Eng'}</span>
         <button ref={arrowRef}>

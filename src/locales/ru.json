@@ -112,6 +112,23 @@
     "footer__nav-fifth": "Тарифы",
     "footer__nav-sixth": "Конкурс",
     "footer__nav-seventh": "Отзывы",
-    "footer__nav-eighth": "Наш результат"
+    "footer__nav-eighth": "Наш результат",
+
+    "faq__title": "Возникли вопросы?",
+    "faq__desc": "FAQ",
+    "faq__question-first": "Сколько времени потребуется для прохождения курса?",
+    "faq__answers-first": "FAQ",
+    "faq__question-second": "Можно ли будет доплатить и повысить тариф?",
+    "faq__answers-second": "FAQ",
+    "faq__question-third": "Нужны ли специальные знания, навыки перед началом обучения?",
+    "faq__answers-third": "Нет, вам не нужны никакие специальные знания. Курс подходит для начинающих и включает все основы, которые вам понадобятся для успешного обучения.",
+    "faq__question-fourth": "Если я не из России подойдет ли мне этот курс?",
+    "faq__answers-fourth": "FAQ",
+    "faq__question-fifth": "Какую поддержку я получу во время обучения?",
+    "faq__answers-fifth": "FAQ",
+    "faq__question-sixth": "Какие проекты мы будем создавать в рамках курса?",
+    "faq__answers-sixth": "FAQ",
+    "faq__question-seventh": "Будет ли доступ к материалам после завершения курса?",
+    "faq__answers-seventh": "FAQ"
 }
   

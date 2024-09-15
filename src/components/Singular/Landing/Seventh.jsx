@@ -10,7 +10,7 @@ const Seventh = () => {
                     <img src="/static/img/smallBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
                 </div>
             </div>
-            <div className={classes.seventh__left}>
+            <div className={`${classes.seventh__left} desktop`}>
                 <span>{t('seventh__desc')} /</span>
                 <div className={classes.seventh__left__images}>
                     <div className={classes.seventh__left__images__first}>

@@ -15,11 +15,11 @@ const Navigation = () => {
 
   return (
     <nav className={classes.nav}>
-      <button>{t('nav__left-button')}</button>
-      <ul>
+      <button className='desktop'>{t('nav__left-button')}</button>
+      <ul className='desktop'>
         {links.map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}
       </ul>
-      <LanguageSwitcher />
+      <LanguageSwitcher className={"desktop"} />
     </nav>
   )
 }

@@ -25,7 +25,7 @@ const Plan = ({ image, list, plan, price, buttonText, places }) => {
                                     <path d="M2.39845 6L0 3.16846L0.480635 2.60091L2.39845 4.86502L6.51937 0L7 0.567555L2.39845 6Z" fill="#F5F5F5" />
                                 </svg>
                             )}
-                            <p>{el.text}</p>
+                            { el.accept ? <s style={{opacity: .6}}><p>{el.text}</p></s> : <p>{el.text}</p>}
                         </div>)}
                     </div>
                 </div>

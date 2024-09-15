@@ -112,5 +112,22 @@
     "footer__nav-fifth": "Tariffs",
     "footer__nav-sixth": "Competition",
     "footer__nav-seventh": "Reviews",
-    "footer__nav-eighth": "Our result"
+    "footer__nav-eighth": "Our result",
+
+    "faq__title": "Any questions?",
+    "faq__desc": "FAQ",
+    "faq__question-first": "How long will it take to complete the course?",
+    "faq__answers-first": "FAQ",
+    "faq__question-second": "Will it be possible to pay extra and increase the rate?",
+    "faq__answers-second": "FAQ",
+    "faq__question-third": "Do you need special knowledge, skills before starting training?",
+    "faq__answers-third": "No, you don't need any special knowledge. The course is suitable for beginners and includes all the basics you will need for successful learning",
+    "faq__question-fourth": "If I am not from Russia, will this course work for me?",
+    "faq__answers-fourth": "FAQ",
+    "faq__question-fifth": "What kind of support will I receive during my training?",
+    "faq__answers-fifth": "FAQ",
+    "faq__question-sixth": "What kind of projects will we create in the course?",
+    "faq__answers-sixth": "FAQ",
+    "faq__question-seventh": "Will there be access to the materials after the course is completed?",
+    "faq__answers-seventh": "FAQ"
 }

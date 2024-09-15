@@ -9,6 +9,11 @@
 
     margin-bottom: 5.13rem;
 
+    @media screen and (width <=850px) {
+        gap: 110px;
+        margin-bottom: 110px;
+    }
+
     &__blur {
         position: absolute;
         top: 0;
@@ -18,6 +23,10 @@
             position: relative;
             width: 82.36rem;
             height: 65.58rem;
+
+            @media screen and (width <=850px) {
+                display: none;
+            }
         }
     }
 
@@ -27,6 +36,12 @@
         height: 30.82rem;
 
         margin-top: 29.96rem;
+
+        @media screen and (width <=850px) {
+            margin-top: 130px;
+            width: 340px;
+            height: 95.38px;
+        }
     }
 
     &__content {
@@ -39,6 +54,10 @@
         width: 100%;
         height: 20.11rem;
 
+        @media screen and (width <=850px) {
+            height: 72px;
+        }
+
         &>h1 {
             max-width: 64.32rem;
 
@@ -49,8 +68,16 @@
             letter-spacing: 1px;
             text-transform: uppercase;
 
-            @media screen and (850px < width <= 1649px) {
+            @media screen and (850px < width <=1649px) {
                 max-width: 68.32rem;
+            }
+
+            @media screen and (width <=850px) {
+                max-width: 244px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 10px;
+                line-height: 120%;
             }
         }
 
@@ -63,6 +90,11 @@
                 position: relative;
                 width: 105.05rem;
                 height: 10.87rem;
+
+                @media screen and (width <=850px) {
+                    width: 336px;
+                    height: 43px;
+                }
             }
         }
 
@@ -75,6 +107,11 @@
                 position: relative;
                 width: 105.05rem;
                 height: 10.87rem;
+
+                @media screen and (width <=850px) {
+                    width: 336px;
+                    height: 43px;
+                }
             }
         }
     }
@@ -84,4 +121,9 @@
     position: relative;
     width: 1.54rem;
     height: 1.54rem;
+
+    @media screen and (width <=850px) {
+        width: 5px;
+        height: 5px;
+    }
 }
