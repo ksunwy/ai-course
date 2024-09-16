@@ -21,10 +21,10 @@ const FAQItem = ({ text, title, id }) => {
 
             if (isDropdownVisible) {
                 slideDown(dropdownElement, 300);
-                arrowElement.classList.add('rotate');
+                arrowElement.classList.add(classes.rotate);
             } else {
                 slideUp(dropdownElement, 300);
-                arrowElement.classList.remove('rotate');
+                arrowElement.classList.remove(classes.rotate);
             }
 
             setTimeout(() => {
@@ -34,8 +34,31 @@ const FAQItem = ({ text, title, id }) => {
     }, [isDropdownVisible]);
 
     return (
-        <div className={classes.top}>
-            <div onClick={toggleDropdown} className={`language-switcher ${classes.dropdown}`} style={{ borderTop: id === 0 && "1px solid #BEBEBE" }}>
+        <>
+            <div className={`${classes.top} mobile`}>
+                <div
+                    onClick={toggleDropdown}
+                    className={`language-switcher ${classes.dropdown}`}
+                    style={{ borderTop: id === 0 ? "1px solid #BEBEBE" : "none" }}
+                >
+                    <div className={classes.wrapper}>
+                        <span>{title}</span>
+                    </div>
+                    <button ref={arrowRef}>
+                        <svg className={`arrow-icon img ${isDropdownVisible ? classes.rotate : classes.unrotate} mobile`} width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M11 10.4864V0.353553H10V9.27926L0.720737 0L0.0136299 0.707107L9.29289 9.98637H0.367184V10.9864H10.5H11V10.4864Z" fill="#BEBEBE" />
+                        </svg>
+                    </button>
+                </div>
+                <p
+                    ref={dropdownRef}
+                    style={{ display: isDropdownVisible ? 'block' : 'none', overflow: 'hidden' }}
+                    className={`dropdown mobile ${classes.text}`}
+                >
+                    {text}
+                </p>
+            </div>
+            <div onClick={toggleDropdown} className={`language-switcher desktop ${classes.dropdown}`} style={{ borderTop: id === 0 && "1px solid #BEBEBE" }}>
                 <div className={classes.wrapper}>
                     <span>{title}</span>
                     <p ref={dropdownRef} style={{ display: 'none', overflow: 'hidden' }} className={`dropdown desktop ${classes.text}`}>
@@ -51,10 +74,7 @@ const FAQItem = ({ text, title, id }) => {
                     </svg>
                 </button>
             </div>
-            <p ref={dropdownRef} style={{ display: 'none', overflow: 'hidden' }} className={`dropdown mobile ${classes.text}`}>
-                {text}
-            </p>
-        </div>
+        </>
     )
 }
 

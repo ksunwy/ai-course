@@ -23,7 +23,7 @@ const Fourth = () => {
             <div className={classes.fourth__left__content}>
                 <h2>{t("fourth__title")}</h2>
                 <div className={classes.fourth__left__content__list}>
-                    {array.map(el => <FourthDescription key={el.id} id={el.id} subtitle={el.subtitle} text={el.text} />)}
+                    {array.map(el => <FourthDescription key={el.id} id={el.id} className={el.id === `02` || el.id === `04` && classes.secondText} subtitle={el.subtitle} text={el.text} />)}
                 </div>
             </div>
             <button>{t("fourth__button-text")}</button>

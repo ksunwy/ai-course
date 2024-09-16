@@ -15,15 +15,19 @@
 
     z-index: 999999999;
 
-    @include width-restriction;
+    @media screen and (width >850px) {
+        @include width-restriction;
+    }
 
     @media screen and (width <=850px) {
+        width: 100%;
         background: none;
-        padding: 27px 0;
+        padding: 27px 16px;
         align-items: flex-end;
         justify-content: flex-end;
 
         flex-direction: column;
+        transition: all .3s;
     }
 
     &>button {
@@ -79,7 +83,7 @@
     flex-direction: column;
     gap: 30px;
 
-    background: var(--color-black);
+    // background: var(--color-black);
     padding-bottom: 34px;
 
     &>ul {

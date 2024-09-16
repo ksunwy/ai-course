@@ -46,7 +46,7 @@ const Navigation = () => {
   }, [isOpen]);
 
   return (
-    <nav className={classes.nav} onClick={toggleDropdown}>
+    <nav className={classes.nav} style={{background: isOpen && "#1C1C1C"}} onClick={toggleDropdown}>
       <button className='desktop'>{t('nav__left-button')}</button>
       <ul className='desktop'>
         {links.map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}

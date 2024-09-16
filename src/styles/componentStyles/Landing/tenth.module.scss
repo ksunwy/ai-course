@@ -64,8 +64,8 @@
 
 .top {
     display: flex;
-    flex-direction: column;
     gap: 10px;
+    flex-direction: column;
 
     @media screen and (width <= 850px) {
         padding-bottom: 15px;

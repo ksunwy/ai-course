@@ -1,20 +1,34 @@
 import { useTranslation } from "react-i18next";
 import classes from "../../../../styles/componentStyles/Landing/sixth.module.scss";
 
-const Plan = ({ image, list, plan, price, buttonText, places }) => {
+const Plan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, hoveredPlan }) => {
     const { t } = useTranslation();
+
     return (
-        <div className={classes.plan}>
-            <div className={classes.plan__image}>
+        <div
+        //  onMouseEnter={() => setHoveredPlan(price === 7900 ? t("sixth__third-title") : t("sixth__first-title"))}
+        //     onMouseLeave={() => setHoveredPlan(null)} 
+            className={
+                // hoveredPlan === plan ? classes.coolPlan : 
+                classes.plan}>
+            <div className={
+                // hoveredPlan === plan ? classes.coolPlan__image : 
+                classes.plan__image}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
             </div>
-            <div className={classes.plan__content}>
+            <div className={
+                // hoveredPlan === plan ? classes.coolPlan__content : 
+                classes.plan__content}>
                 <div className={classes.plan__content__top}>
-                    <div className={classes.plan__content__top__price}>
+                    <div className={
+                        // hoveredPlan === plan ? classes.coolPlan__content__top__price : 
+                         classes.plan__content__top__price}>
                         <span>{plan}</span>
                         <h4>${price}</h4>
                     </div>
-                    <div className={classes.plan__content__top__list}>
+                    <div className={
+                        // hoveredPlan === plan ? classes.coolPlan__content__top__list : 
+                        classes.plan__content__top__list}>
                         {list.map((el, i) => <div key={i}>
                             {el.accept ? (
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +39,7 @@ const Plan = ({ image, list, plan, price, buttonText, places }) => {
                                     <path d="M2.39845 6L0 3.16846L0.480635 2.60091L2.39845 4.86502L6.51937 0L7 0.567555L2.39845 6Z" fill="#F5F5F5" />
                                 </svg>
                             )}
-                            { el.accept ? <s style={{opacity: .6}}><p>{el.text}</p></s> : <p>{el.text}</p>}
+                            {el.accept ? <s className={classes.smallThroughText}><p>{el.text}</p></s> : <p>{el.text}</p>}
                         </div>)}
                     </div>
                 </div>

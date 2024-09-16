@@ -75,6 +75,12 @@
         gap: 7.44rem;
         z-index: 999;
 
+        @media screen and (width <=850px) {
+            margin-bottom: 100px;
+            align-items: flex-start;
+            gap: 0;
+        }
+
         &__left {
             display: flex;
             flex-direction: column;
@@ -104,7 +110,7 @@
     background: rgba(120, 120, 120, 0.2);
     backdrop-filter: blur(7.5px);
 
-    @media screen and (850px < width <= 1083px) {
+    @media screen and (850px < width <=1083px) {
         width: 46.64rem;
     }
 
@@ -170,4 +176,135 @@
 .fourthImage {
     width: 13.78rem;
     height: 16.35rem;
+}
+
+.slider {
+    position: relative;
+    max-width: 340px;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;  
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__content {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+.slider-item {
+    min-width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    position: absolute;
+    top: 0;
+}
+
+.slider-item-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); 
+}
+
+.slider-item-exit {
+    opacity: 0;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+
+.mobileReview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__content {
+        max-width: 330px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        padding: 15px;
+        background: rgba(120, 120, 120, 0.2);
+        backdrop-filter: blur(7.5px);
+
+        &__top {
+            display: flex;
+            gap: 10px;
+
+            &__left {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                min-height: 40px;
+                border-radius: 500px;
+            }
+
+            &__right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+
+                &__name {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    &>span {
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: -1px;
+                        text-transform: uppercase;
+                        opacity: 0.8;
+                    }
+
+                    &__line {
+                        width: 100%;
+                        height: 1px;
+
+                        background: #D9D9D9;
+                    }
+                }
+
+            }
+        }
+
+        &__bottom {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+            font-size: 10px;
+            line-height: 120%;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: flex-end;
+}
+
+.bullet {
+    width: 102px;
+    height: 1px;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.bullet-active {
+    background-color: #D9D9D9;
+    width: 102px;
+    height: 3px;
 }

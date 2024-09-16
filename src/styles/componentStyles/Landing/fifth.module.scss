@@ -52,7 +52,7 @@
         gap: 3.42rem;
         margin-left: 16.6rem;
 
-        @media screen and (850px < width <= 1083px) {
+        @media screen and (850px < width <=1083px) {
             margin-left: 0rem;
         }
 
@@ -65,13 +65,13 @@
         &__left {
             position: relative;
             width: 42.46rem;
-            height: 44.77rem;
+            height: 42.77rem;
 
             margin-bottom: 13.69rem;
 
             @media screen and (width <=850px) {
                 width: 297px;
-                height: 287px;
+                height: 275px;
                 margin-bottom: 0;
             }
         }
@@ -114,7 +114,7 @@
                 &>p {
                     max-width: 56.42rem;
                     font-family: 'Roboto', sans-serif;
-                    font-weight: 300;
+                    font-weight: 200;
                     font-size: 2.14rem;
                     line-height: 120%;
 
@@ -137,7 +137,7 @@
 
                     &>h4 {
                         font-family: 'Roboto', sans-serif;
-                        font-weight: 300;
+                        font-weight: 200;
                         font-size: 2.14rem;
                         line-height: 120%;
                         text-transform: uppercase;
@@ -164,6 +164,38 @@
                     }
                 }
             }
+
+            &__bottom {
+                display: flex;
+                align-items: center;
+                gap: 1.71rem;
+
+                @media screen and (width <=850px) {
+                    gap: 20px;
+                }
+            }
         }
     }
+}
+
+.slider {
+    @include width-restriction;
+}
+
+.pagination {
+    display: flex;
+    align-items: flex-end;
+}
+
+.bullet {
+    width: 22px;
+    height: 1px;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.bullet-active {
+    background-color: #D9D9D9;
+    width: 22px;
+    height: 3px;
 }

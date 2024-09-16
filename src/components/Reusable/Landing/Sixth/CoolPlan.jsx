@@ -1,10 +1,13 @@
 import { useTranslation } from "react-i18next";
 import classes from "../../../../styles/componentStyles/Landing/sixth.module.scss";
 
-const CoolPlan = ({ image, list, plan, price, buttonText, places }) => {
+const CoolPlan = ({ image, list, plan, price, buttonText, places, setHoveredPlan }) => {
     const { t } = useTranslation();
     return (
-        <div className={classes.coolPlan}>
+        <div 
+        // onMouseEnter={() => setHoveredPlan(t("sixth__second-title"))}
+        //     onMouseLeave={() => setHoveredPlan(null)} 
+            className={classes.coolPlan}>
             <div className={classes.coolPlan__image}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
             </div>
