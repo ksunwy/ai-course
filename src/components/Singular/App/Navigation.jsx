@@ -25,6 +25,20 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
 
+  const [windowWidth, setWindowWidth] = useState(900);
+
+  useEffect(() => {
+      const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener('resize', handleResize);
+      
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+  }, []);
+
   useEffect(() => {
     const dropdownElement = dropdownSecondRef.current;
     const arrowElement = arrowRef.current;
@@ -46,7 +60,7 @@ const Navigation = () => {
   }, [isOpen]);
 
   return (
-    <nav className={classes.nav} style={{background: isOpen && "#1C1C1C"}} onClick={toggleDropdown}>
+    <nav className={classes.nav} style={{background: isOpen && windowWidth <= 850 && "#1C1C1C"}} onClick={toggleDropdown}>
       <button className='desktop'>{t('nav__left-button')}</button>
       <ul className='desktop'>
         {links.map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}
