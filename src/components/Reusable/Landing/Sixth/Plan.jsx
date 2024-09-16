@@ -6,29 +6,29 @@ const Plan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, ho
 
     return (
         <div
-        //  onMouseEnter={() => setHoveredPlan(price === 7900 ? t("sixth__third-title") : t("sixth__first-title"))}
-        //     onMouseLeave={() => setHoveredPlan(null)} 
+            onMouseEnter={() => setHoveredPlan(price === 7900 ? t("sixth__third-title") : t("sixth__first-title"))}
+            onMouseLeave={() => setHoveredPlan(null)}
             className={
-                // hoveredPlan === plan ? classes.coolPlan : 
-                classes.plan}>
+                hoveredPlan === plan ? `${classes.coolPlan} ${classes.last}` :
+                    `${classes.plan}`}>
             <div className={
-                // hoveredPlan === plan ? classes.coolPlan__image : 
-                classes.plan__image}>
+                hoveredPlan === plan ? classes.coolPlan__image :
+                    classes.plan__image}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
             </div>
             <div className={
-                // hoveredPlan === plan ? classes.coolPlan__content : 
-                classes.plan__content}>
+                hoveredPlan === plan ? classes.coolPlan__content :
+                    classes.plan__content}>
                 <div className={classes.plan__content__top}>
                     <div className={
-                        // hoveredPlan === plan ? classes.coolPlan__content__top__price : 
-                         classes.plan__content__top__price}>
+                        hoveredPlan === plan ? classes.coolPlan__content__top__price :
+                            classes.plan__content__top__price}>
                         <span>{plan}</span>
                         <h4>${price}</h4>
                     </div>
                     <div className={
-                        // hoveredPlan === plan ? classes.coolPlan__content__top__list : 
-                        classes.plan__content__top__list}>
+                        hoveredPlan === plan ? classes.coolPlan__content__top__list :
+                            classes.plan__content__top__list}>
                         {list.map((el, i) => <div key={i}>
                             {el.accept ? (
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">

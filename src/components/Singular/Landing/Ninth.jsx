@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import VideoSlider from "../Sliders/VideoSlider.jsx";
 import classes from "../../../styles/componentStyles/Landing/ninth.module.scss";
 
 const Ninth = () => {
@@ -11,9 +12,7 @@ const Ninth = () => {
                     <p>{t("ninth__text")}</p>
                 </div>
                 <div className={`${classes.ninth__right} mobile`}>
-                    <div className={classes.ninth__right__image}>
-                        <img src="/static/img/ninth/video.png" alt="video" width={"100%"} height={"100%"} />
-                    </div>
+                    <VideoSlider />
                 </div>
                 <div className={classes.ninth__left__bottom}>
                     <p>{t("ninth__text-second")}</p>
@@ -21,9 +20,10 @@ const Ninth = () => {
                 </div>
             </div>
             <div className={`${classes.ninth__right} desktop`}>
-                <div className={classes.ninth__right__image}>
+                {/* <div className={classes.ninth__right__image}>
                     <img src="/static/img/ninth/video.png" alt="video" width={"100%"} height={"100%"} />
-                </div>
+                </div> */}
+                <VideoSlider className={'desktop'} />
             </div>
         </section>
     )

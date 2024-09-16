@@ -1,23 +1,23 @@
 import { useTranslation } from "react-i18next";
 import classes from "../../../../styles/componentStyles/Landing/sixth.module.scss";
 
-const CoolPlan = ({ image, list, plan, price, buttonText, places, setHoveredPlan }) => {
+const CoolPlan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, hoveredPlan }) => {
     const { t } = useTranslation();
     return (
-        <div 
-        // onMouseEnter={() => setHoveredPlan(t("sixth__second-title"))}
-        //     onMouseLeave={() => setHoveredPlan(null)} 
-            className={classes.coolPlan}>
-            <div className={classes.coolPlan__image}>
+        <div
+            onMouseEnter={() => setHoveredPlan(t("sixth__second-title"))}
+            onMouseLeave={() => setHoveredPlan(null)}
+            className={hoveredPlan === plan ? classes.coolPlan : classes.plan}>
+            <div className={hoveredPlan === plan ? classes.coolPlan__image : classes.plan__image}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
             </div>
-            <div className={classes.coolPlan__content}>
+            <div className={hoveredPlan === plan ? classes.coolPlan__content : classes.plan__content}>
                 <div className={classes.plan__content__top}>
-                    <div className={classes.coolPlan__content__top__price}>
+                    <div className={hoveredPlan === plan ? classes.coolPlan__content__top__price : classes.plan__content__top__price}>
                         <span>{plan}</span>
                         <h4>${price}</h4>
                     </div>
-                    <div className={classes.coolPlan__content__top__list}>
+                    <div className={hoveredPlan === plan ? classes.coolPlan__content__top__list : classes.plan__content__top__list}>
                         {list.map((el, i) => (
                             <div key={i}>
                                 {el.accept ? (

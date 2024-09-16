@@ -7,7 +7,7 @@
     align-items: center;
     gap: 15.92rem;
 
-    margin-bottom: 5.13rem;
+    margin-bottom: 13.69rem;
 
     @media screen and (width <=850px) {
         gap: 110px;
@@ -59,17 +59,17 @@
         }
 
         &>h1 {
-            max-width: 64.32rem;
+            max-width: 50.32rem;
 
-            font-weight: 200;
-            font-size: 3.42rem;
+            font-weight: 100;
+            font-size: 2.56rem;
             line-height: 4.02rem;
             text-align: center;
             letter-spacing: 1px;
             text-transform: uppercase;
 
             @media screen and (850px < width <=1649px) {
-                max-width: 68.32rem;
+                max-width: 60.05rem;
             }
 
             @media screen and (width <=850px) {
@@ -84,11 +84,11 @@
         &__top {
             position: absolute;
             top: 0;
-            left: 0;
+            right: 32.02rem;
 
             &__image {
                 position: relative;
-                width: 105.05rem;
+                width: 130.05rem;
                 height: 10.87rem;
 
                 @media screen and (width <=850px) {
@@ -100,12 +100,12 @@
 
         &__bottom {
             position: absolute;
-            right: 0;
+            left: 32.02rem;
             bottom: 0;
 
             &__image {
                 position: relative;
-                width: 105.05rem;
+                width: 130.05rem;
                 height: 10.87rem;
 
                 @media screen and (width <=850px) {

@@ -32,24 +32,25 @@ const Sixth = () => {
         { text: `${t('sixth__tenth-list')}` },
         { text: `${t('sixth__fifth-list')}` },
     ];
-    const [hoveredPlan, setHoveredPlan] = useState(null);
-    
+    const [hoveredPlan, setHoveredPlan] = useState(t('sixth__second-title'));
+
     return (
         <section id="plans" className={classes.sixth}>
             <div className={classes.sixth__content}>
                 <h2>{t('sixth__title')}</h2>
                 <div className={classes.sixth__content__cards}>
                     <Plan
-                    // hoveredPlan={hoveredPlan}
-                    // setHoveredPlan={setHoveredPlan}
-                     image={"/static/img/sixth/sixthFirstImage.png"} list={firstList} plan={t("sixth__first-title")} price={340} buttonText={t("sixth__buttonText")} />
-                    <CoolPlan 
-                    // setHoveredPlan={setHoveredPlan}
-                    image={"/static/img/sixth/sixthSecondImage.png"} list={secondList} plan={t("sixth__second-title")} price={990} buttonText={t("sixth__buttonText")} places={100} />
-                    <Plan 
-                     // hoveredPlan={hoveredPlan}
-                    // setHoveredPlan={setHoveredPlan}
-                    image={"/static/img/sixth/sixthThirdImage.png"} list={thirdList} plan={t("sixth__third-title")} price={7900} buttonText={t("sixth__buttonText")} places={10} />
+                        hoveredPlan={hoveredPlan}
+                        setHoveredPlan={setHoveredPlan}
+                        image={"/static/img/sixth/sixthFirstImage.png"} list={firstList} plan={t("sixth__first-title")} price={340} buttonText={t("sixth__buttonText")} />
+                    <CoolPlan
+                        hoveredPlan={hoveredPlan}
+                        setHoveredPlan={setHoveredPlan}
+                        image={"/static/img/sixth/sixthSecondImage.png"} list={secondList} plan={t("sixth__second-title")} price={990} buttonText={t("sixth__buttonText")} places={100} />
+                    <Plan
+                        hoveredPlan={hoveredPlan}
+                        setHoveredPlan={setHoveredPlan}
+                        image={"/static/img/sixth/sixthThirdImage.png"} list={thirdList} plan={t("sixth__third-title")} price={7900} buttonText={t("sixth__buttonText")} places={10} />
                 </div>
             </div>
         </section>

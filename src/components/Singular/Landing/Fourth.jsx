@@ -1,9 +1,13 @@
 import { useTranslation } from "react-i18next";
+import { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import FourthDescription from "../../Reusable/Landing/Fourth/FourthDescription.jsx";
 import classes from "../../../styles/componentStyles/Landing/fourth.module.scss";
 
 const Fourth = () => {
     const { t } = useTranslation();
+    const swiperRef = useRef(null);
 
     const array = [
         {id: `01`, subtitle: `${t("fourth__first-subtitle")}`, text: `${t("fourth__first-desc")}`},
@@ -11,6 +15,11 @@ const Fourth = () => {
         {id: `03`, subtitle: `${t("fourth__third-subtitle")}`, text: `${t("fourth__third-desc")}`},
         {id: `04`, subtitle: `${t("fourth__fourth-subtitle")}`, text: `${t("fourth__fourth-desc")}`},
     ];
+
+    const swiperParams = {
+        slidesPerView: 1.12,
+        spaceBetween: 20,
+    };
 
   return (
     <section className={classes.fourth}>
@@ -29,9 +38,46 @@ const Fourth = () => {
             <button>{t("fourth__button-text")}</button>
         </div>
         <div className={classes.fourth__right}>
-            <div className={classes.fourth__right__image}>
-                <img src="/static/img/fourth/fourthFirstImage.png" alt="image" width={"100%"} height={"100%"} />
-            </div>
+            <Swiper
+                ref={swiperRef}
+                {...swiperParams}
+            >
+                <SwiperSlide>
+                    <div className={classes.fourth__right__image}>
+                        <img src="/static/img/fourth/fourthFirstImage.png" alt="image" width={"100%"} height={"100%"} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={classes.fourth__right__image}>
+                        <img src="/static/img/fourth/fourthSecondImage.png" alt="image" width={"100%"} height={"100%"} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={classes.fourth__right__image}>
+                        <img src="/static/img/fourth/fourthThirdImage.png" alt="image" width={"100%"} height={"100%"} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={classes.fourth__right__image}>
+                        <img src="/static/img/fourth/fourthFourthImage.png" alt="image" width={"100%"} height={"100%"} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={classes.fourth__right__image}>
+                        <img src="/static/img/fourth/fourthFifthImage.png" alt="image" width={"100%"} height={"100%"} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={classes.fourth__right__image}>
+                        <img src="/static/img/fourth/fourthSixthImage.png" alt="image" width={"100%"} height={"100%"} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={classes.fourth__right__image}>
+                        <img src="/static/img/fourth/fourthSeventhImage.png" alt="image" width={"100%"} height={"100%"} />
+                    </div>
+                </SwiperSlide>
+            </Swiper>
         </div>
     </section>
   )

@@ -156,3 +156,114 @@
         }
     }
 }
+
+.mySwiper {
+    position: relative;
+    max-width: 73.66rem;
+    height: 81.16rem;
+
+    @media screen and (width <= 850px) {
+        max-width: 355px;
+        height: 413px;
+    }
+
+    .custom-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20%;
+        z-index: 10;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        @media screen and (width <= 850px) {
+            left: 50px;
+        }
+
+        svg {
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+        }
+    }
+
+    .custom-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5%;
+        z-index: 10;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        @media screen and (width <= 850px) {
+            right: 35px;
+        }
+
+        svg {
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+        }
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease;
+
+        video {
+            display: flex;
+            margin: 0 auto;
+            border-radius: 10px;
+            width: 100%; 
+            height: auto;
+            object-fit: cover;
+            // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            margin-top: 10px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        &.swiper-slide-prev,
+        &.swiper-slide-next {
+            transform: scale(0.85);  
+            opacity: 0.6;  
+        }
+
+        &.swiper-slide-active {
+            transform: scale(1); 
+            opacity: 1; 
+        }
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.video {
+    position: relative;
+    width: 482px;
+    height: 948px;
+
+    @media screen and (width <= 850px) {
+        width: 200px;
+        height: 400px;
+    }
+}
