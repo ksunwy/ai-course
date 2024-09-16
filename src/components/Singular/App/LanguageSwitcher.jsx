@@ -3,7 +3,7 @@ import i18n from 'i18next';
 import { slideDown, slideUp } from '../../../utils/slideFunctions.js';
 import classes from "../../../styles/componentStyles/App/languageSwitcher.module.scss";
 
-function LanguageSwitcher({className}) {
+function LanguageSwitcher({ className }) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const dropdownRef = useRef(null);
@@ -15,7 +15,8 @@ function LanguageSwitcher({className}) {
     setIsDropdownVisible(false);
   };
 
-  const toggleDropdown = () => {
+  const toggleDropdown = (event) => {
+    event.stopPropagation();
     if (isAnimating) return;
     setIsDropdownVisible(!isDropdownVisible);
   };
@@ -39,6 +40,18 @@ function LanguageSwitcher({className}) {
       }, 300);
     }
   }, [isDropdownVisible]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownVisible(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className={className}>

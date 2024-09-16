@@ -158,6 +158,10 @@
             gap: 14rem;
         }
 
+        @media screen and (width >1649px) {
+            gap: 27.5rem;
+        }
+
         @media screen and (width <=850px) {
             padding-left: 20px;
             padding-top: 10px;

@@ -12,14 +12,33 @@
         opacity: .7;
     }
 
+    @media screen and (width <=850px) {
+        gap: 4px;
+        width: fit-content;
+    }
+
     &>span {
         font-weight: 400;
         font-size: 1.37rem;
         line-height: 1.66rem;
+
+        @media screen and (width <=850px) {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
     }
 
     &>button {
         margin-top: -3px;
+
+        @media screen and (width <=850px) {
+            margin-top: 0;
+        }
     }
 }
 
@@ -34,6 +53,11 @@
 
     background: var(--color-black);
 
+    @media screen and (width <=850px) {
+       left: -290px;
+       top: 15px;
+    }
+
     &>button {
         font-weight: 400;
         font-size: 1.37rem;
@@ -45,6 +69,13 @@
         &:hover {
             opacity: .7;
         }
+
+        @media screen and (width <=850px) {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+         }
     
     }
 }

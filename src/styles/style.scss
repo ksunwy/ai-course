@@ -249,3 +249,77 @@ html {
 main {
   height: 100dvh;
 }
+
+#first {
+  animation: first 0.5s forwards;
+}
+
+@keyframes first {
+  100% {
+      transform: rotate(45deg) translateX(2px);
+  }
+}
+
+#first-close {
+  animation: first-close 0.5s forwards;
+}
+
+@keyframes first-close {
+  0% {
+      transform: rotate(45deg) translateX(2px);
+  }
+
+  100% {
+      transform: rotate(0) translateX(0);
+  }
+}
+
+#second {
+  animation: second 0.5s forwards;
+}
+
+@keyframes second {
+  100% {
+      opacity: 0;
+  }
+}
+
+#second-close {
+  animation: second-close 0.5s forwards;
+}
+
+@keyframes second-close {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+#third {
+  width: 19px; 
+  animation: third 0.5s forwards;
+}
+
+@keyframes third {
+  100% {
+      transform: rotate(-45deg) translateX(-11px);
+  }
+}
+
+#third-close {
+  width: 31px; 
+  animation: third-close 0.5s forwards;
+}
+
+@keyframes third-close {
+  0% {
+      transform: rotate(-45deg) translateX(-11px);
+  }
+
+  100% {
+      transform: rotate(0) translateX(0);
+  }
+}
