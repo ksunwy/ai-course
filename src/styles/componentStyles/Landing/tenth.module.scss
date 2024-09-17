@@ -8,7 +8,16 @@
 
     @include width-restriction;
 
+    &__blur {
+        position: absolute;
+        top: -10%;
+        right: 2%;
+        filter: blur(50px) brightness(130%) saturate(80%);
+        transform: rotate(20deg);
+    }
+
     &__content {
+        position: relative;
         width: 100%;
 
         display: flex;

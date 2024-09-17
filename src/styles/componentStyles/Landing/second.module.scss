@@ -20,8 +20,9 @@
 
     &__blur {
         position: absolute;
-        top: 23.13rem;
-        left: -20%;
+        top: 50.13rem;
+        left: -23%;
+        filter: brightness(120%) saturate(80%);
 
         @media screen and (width <=850px) {
             left: 0;
@@ -36,7 +37,7 @@
             transform: rotate(21.31deg);
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(abstract-art-design-background-with-wave-3d-render.png);
             // opacity: 0.5;
-            filter: blur(150px);
+            filter: blur(80px);
             z-index: 1;
 
             @media screen and (width <=850px) {
@@ -50,8 +51,9 @@
 
     &__smallBlur {
         position: absolute;
-        bottom: -37%;
-        left: 0;
+        top: -23.13rem;
+        right: -10%;
+        filter: brightness(110%);
 
         @media screen and (width <=850px) {
             bottom: 300px;
@@ -59,8 +61,32 @@
 
         &__image {
             position: relative;
-            width: 82.36rem;
-            height: 65.58rem;
+            width: 102.36rem;
+            height: 85.58rem;
+            z-index: 1;
+
+            @media screen and (width <=850px) {
+                width: 218.7px;
+                height: 134.24px;
+            }
+        }
+    }
+
+    &__smallBlurSecond {
+        position: absolute;
+        top: 10.13rem;
+        left: -8%;
+        transform: rotate(180deg);
+        filter: brightness(120%) saturate(80%);
+
+        @media screen and (width <=850px) {
+            bottom: 300px;
+        }
+
+        &__image {
+            position: relative;
+            width: 102.36rem;
+            height: 85.58rem;
             z-index: 1;
 
             @media screen and (width <=850px) {
@@ -237,6 +263,7 @@
             font-size: 2.56rem;
             line-height: 120%;
             text-transform: uppercase;
+            opacity: .9;
 
             @media screen and (850px < width <=1083px) {
                 max-width: 20.25rem;

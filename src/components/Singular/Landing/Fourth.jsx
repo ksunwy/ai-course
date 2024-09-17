@@ -35,7 +35,7 @@ const Fourth = () => {
                     {array.map(el => <FourthDescription key={el.id} id={el.id} className={el.id === `02` || el.id === `04` && classes.secondText} subtitle={el.subtitle} text={el.text} />)}
                 </div>
             </div>
-            <button>{t("fourth__button-text")}</button>
+            <a href='https://t.me/yoraiacademy_bot' target='_blank'>{t("fourth__button-text")}</a>
         </div>
         <div className={classes.fourth__right}>
             <Swiper

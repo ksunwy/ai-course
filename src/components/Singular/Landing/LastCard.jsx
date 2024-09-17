@@ -9,7 +9,7 @@ const LastCard = () => {
             <h2>{t('last__title')}</h2>
             <p>{t('last__text')}</p>
         </div>
-        <button>{t('last__text-button')}</button>
+        <a href='https://t.me/yoraiacademy_bot' target='_blank'>{t('last__text-button')}</a>
     </section>
   )
 }

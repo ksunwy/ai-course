@@ -16,7 +16,7 @@ const Ninth = () => {
                 </div>
                 <div className={classes.ninth__left__bottom}>
                     <p>{t("ninth__text-second")}</p>
-                    <button>{t("ninth__text-button")}</button>
+                    <a href='https://t.me/yoraiacademy_bot' target='_blank'>{t("ninth__text-button")}</a>
                 </div>
             </div>
             <div className={`${classes.ninth__right} desktop`}>

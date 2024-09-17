@@ -18,13 +18,16 @@
 
     &__blur {
         position: absolute;
-        top: 0;
-        right: -10%;
+        top: -70%;
+        right: -25%;
+        filter: brightness(130%);
 
         &__image {
             position: relative;
-            width: 82.36rem;
-            height: 65.58rem;
+            width: 102.36rem;
+            height: 105.58rem;
+            transform: scaleY(-1) rotate(-45deg);
+            filter: blur(80px);
             z-index: 1;
 
             @media screen and (width <=850px) {
@@ -53,7 +56,7 @@
     &__first {
         display: flex;
         gap: 3.42rem;
-        margin-left: 16.6rem;
+        margin-left: 10rem;
 
         @media screen and (850px < width <=1083px) {
             margin-left: 0rem;

@@ -45,7 +45,7 @@ const Plan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, ho
                 </div>
                 <div className={classes.plan__content__bottom}>
                     {places && <span>{t("sixth__left")} <span>{places}</span></span>}
-                    <button>{buttonText}</button>
+                    <a href='https://t.me/yoraiacademy_bot' target='_blank'>{buttonText}</a>
                 </div>
             </div>
         </div>

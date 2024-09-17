@@ -23,7 +23,11 @@ const EightItem = ({ isSecond, text, secondText, image, imageSecond, name, secon
                             </svg>
                         </div>
                     </div>
-                    <p className={classes.mobileReview__content__bottom}>{secondText}</p>
+                    <div className={classes.mobileReview__content__main}>
+                        {secondText.map((el, i) => (
+                            <p key={i} className={classes.mobileReview__content__bottom}>{el}</p>
+                        ))}
+                    </div>
                 </div>
             }
             <div className={classes.mobileReview__content}>
@@ -45,7 +49,11 @@ const EightItem = ({ isSecond, text, secondText, image, imageSecond, name, secon
                         </svg>
                     </div>
                 </div>
-                <p className={classes.mobileReview__content__bottom}>{text}</p>
+                <div className={classes.mobileReview__content__main}>
+                        {text.map((el, i) => (
+                            <p key={i} className={classes.mobileReview__content__bottom}>{el}</p>
+                        ))}
+                    </div>
             </div>
         </div>
     )

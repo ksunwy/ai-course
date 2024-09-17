@@ -1,6 +1,6 @@
 import classes from "../../../../styles/componentStyles/Landing/eighth.module.scss";
 
-const Review = ({ image, reviewClasses, imageClasses, name, review }) => {
+const Review = ({ image, reviewClasses, imageClasses, name, array }) => {
     return (
         <div className={`${classes.review} ${reviewClasses}`}>
             <div className={`${classes.review__top}`}>
@@ -12,7 +12,11 @@ const Review = ({ image, reviewClasses, imageClasses, name, review }) => {
                     <div className={`${classes.review__top__text__image} ${imageClasses}`}>
                         <img src={image} alt="image" width={"100%"} height={"100%"} className={imageClasses} />
                     </div>
-                    <p>{review}</p>
+                    <div className={classes.review__top__text__main}>
+                        {array.map((el, i) => (
+                            <p key={i}>{el}</p>
+                        ))}
+                    </div>
                 </div>
             </div>
             <svg width="160" height="24" viewBox="0 0 160 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +27,7 @@ const Review = ({ image, reviewClasses, imageClasses, name, review }) => {
                 <path d="M148 0L150.694 8.2918H159.413L152.359 13.4164L155.053 21.7082L148 16.5836L140.947 21.7082L143.641 13.4164L136.587 8.2918H145.306L148 0Z" fill="#D9D9D9" />
             </svg>
         </div>
-    )
+    );
 }
 
-export default Review
+export default Review;

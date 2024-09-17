@@ -35,10 +35,10 @@
 
         &__image {
             position: relative;
-            width: 102.36rem;
-            height: 85.58rem;
-            filter: blur(100px);
-            transform: rotate(21.31deg);
+            width: 112.36rem;
+            height: 75.58rem;
+            filter: brightness(120%) blur(80px) saturate(90%);
+            transform: rotate(31.31deg);
 
             z-index: 1;
         }
@@ -149,12 +149,18 @@
                 position: relative;
             }
 
-            &>p {
-                font-family: 'Roboto', sans-serif;
-                font-weight: 300;
-                font-size: 1.54rem;
-                line-height: 120%;
+            &__main {
+                display: flex;
+                flex-direction: column;
+
+                &>p {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    font-size: 1.54rem;
+                    line-height: 120%;
+                }
             }
+
         }
     }
 }
@@ -182,7 +188,7 @@
 .slider {
     position: relative;
     max-width: 340px;
-    height: 352px;
+    height: 372px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -236,6 +242,11 @@
         padding: 15px;
         background: rgba(120, 120, 120, 0.2);
         backdrop-filter: blur(7.5px);
+
+        &__main {
+            display: flex;
+            flex-direction: column;
+        }
 
         &__top {
             display: flex;

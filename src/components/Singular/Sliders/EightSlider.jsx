@@ -5,24 +5,30 @@ import classes from '../../../styles/componentStyles/Landing/eighth.module.scss'
 
 const EightSlider = () => {
     const { t } = useTranslation();
+
+    const firstArray = [`${t('eighth__review-first')}`, `${t('eighth__review-first-break')}`, `${t('eighth__review-first-break-first')}`];
+    const secondArray = [`${t('eighth__review-second')}`, `${t('eighth__review-second-break')}`, `${t('eighth__review-second-break-first')}`, `${t('eighth__review-second-break-second')}, ${t('eighth__review-second-break-third')}, ${t('eighth__review-second-break-fourth')}`];
+    const thirdArray = [`${t('eighth__review-third')}`, `${t('eighth__review-third-break')}`, `${t('eighth__review-third-break-first')}`];
+    const fourthArray = [`${t('eighth__review-fourth')}`, `${t('eighth__review-fourth-break')}`];
+
     const items = [
         {
             isSecond: true,
             image: '/static/img/eight/smallSecondReviewImage.png',
-            text: t('eighth__review-fourth'),
+            text: fourthArray,
             name: 'Aisha',
-            secondText: t('eighth__review-third'),
+            secondText: thirdArray,
             secondName: 'Maria',
             imageSecond: '/static/img/eight/smallFirstReviewImage.png',
         },
         {
             image: '/static/img/eight/smallThirdReviewImage.png',
-            text: t('eighth__review-first'),
+            text: firstArray,
             name: 'Tatyana',
         },
         {
             image: '/static/img/eight/smallFourthReviewImage.png',
-            text: t('eighth__review-second'),
+            text: secondArray,
             name: 'Sofia',
         },
     ];

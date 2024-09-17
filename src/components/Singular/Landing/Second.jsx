@@ -8,12 +8,17 @@ const Second = () => {
     <section id="bases" className={classes.second}>
         <div className={classes.second__blur}>
             <div className={classes.second__blur__image}>
-                <img src="/static/img/firstBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
+                <img src="/static/img/thirdBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
             </div>
         </div>
         <div className={classes.second__smallBlur}>
             <div className={classes.second__smallBlur__image}>
-                <img src="/static/img/smallBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
+                <img src="/static/img/thirdBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
+            </div>
+        </div>
+        <div className={classes.second__smallBlurSecond}>
+            <div className={classes.second__smallBlurSecond__image}>
+                <img src="/static/img/thirdBlur.png" alt="bg-blur" width={"100%"} height={"100%"} />
             </div>
         </div>
         <div className={classes.second__left}>

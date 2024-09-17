@@ -21,13 +21,14 @@
 
     &__blur {
         position: absolute;
-        top: 0;
+        top: -25%;
         left: -10%;
+        filter: brightness(130%);
 
         &__image {
             position: relative;
-            width: 82.36rem;
-            height: 65.58rem;
+            width: 92.36rem;
+            height: 105.58rem;
             transform: rotate(180deg);
             z-index: 1;
 
@@ -52,7 +53,7 @@
             margin-left: 0;
         }
 
-        &>button {
+        &>a {
             width: fit-content;
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
@@ -125,7 +126,8 @@
 
         @media screen and (width <=850px) {
             margin-bottom: 45px;
-            max-width: 297px;
+            margin-right: -40px;
+            max-width: 337px;
         }
 
         &__image {

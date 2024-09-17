@@ -61,7 +61,7 @@ const Navigation = () => {
 
   return (
     <nav className={classes.nav} style={{background: isOpen && windowWidth <= 850 && "#1C1C1C"}} onClick={toggleDropdown}>
-      <button className='desktop'>{t('nav__left-button')}</button>
+      <a href='https://t.me/yoraiacademy_bot' target='_blank' className='desktop'>{t('nav__left-button')}</a>
       <ul className='desktop'>
         {links.map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}
       </ul>
@@ -83,7 +83,7 @@ const Navigation = () => {
         <ul>
           {links.slice(0, -1).map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}
         </ul>
-        <button>{t('last__text-button')}</button>
+        <a href='https://t.me/yoraiacademy_bot' target='_blank'>{t('last__text-button')}</a>
       </div>
     </nav>
   )
