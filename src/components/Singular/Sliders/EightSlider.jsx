@@ -28,47 +28,54 @@ const EightSlider = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [prevIndex, setPrevIndex] = useState(null);
+    const [dragging, setDragging] = useState(false);
     const sliderRef = useRef();
-    
+    const startX = useRef(0);
+
     const handleNext = () => {
         if (currentIndex < items.length - 1) {
-            setPrevIndex(currentIndex);
             setCurrentIndex((prevIndex) => prevIndex + 1);
         }
     };
 
     const handlePrev = () => {
         if (currentIndex > 0) {
-            setPrevIndex(currentIndex);
             setCurrentIndex((prevIndex) => prevIndex - 1);
         }
     };
 
     const handleDragStart = (e) => {
-        sliderRef.current = { startX: e.clientX, timestamp: Date.now() };
+        setDragging(true);
+        startX.current = e.clientX || e.touches[0].clientX;
     };
 
-    const handleDragEnd = (e) => {
-        if (!sliderRef.current) return;
-        const distanceX = e.clientX - sliderRef.current.startX;
-        const timeDiff = Date.now() - sliderRef.current.timestamp;
+    const handleDragMove = (e) => {
+        if (!dragging) return;
+        const currentX = e.clientX || e.touches[0].clientX;
+        const diff = startX.current - currentX;
 
-        if (distanceX < -50 && timeDiff < 300) {
+        if (diff > 50) {
             handleNext();
-        } else if (distanceX > 50 && timeDiff < 300) {
+            setDragging(false);
+        } else if (diff < -50) {
             handlePrev();
+            setDragging(false);
         }
+    };
 
-        sliderRef.current = null;
+    const handleDragEnd = () => {
+        setDragging(false);
     };
 
     return (
         <div
             className={classes.slider}
             onMouseDown={handleDragStart}
+            onMouseMove={handleDragMove}
             onMouseUp={handleDragEnd}
+            onMouseLeave={handleDragEnd} 
             onTouchStart={handleDragStart}
+            onTouchMove={handleDragMove}
             onTouchEnd={handleDragEnd}
         >
             <div className={classes.slider__content}>
@@ -78,8 +85,6 @@ const EightSlider = () => {
                         className={`${classes['slider-item']} ${
                             currentIndex === index
                                 ? classes['slider-item-active']
-                                : prevIndex === index
-                                ? classes['slider-item-exit']
                                 : ''
                         }`}
                     >
@@ -88,7 +93,10 @@ const EightSlider = () => {
                 ))}
             </div>
             <div className={classes.slider__wrapper}>
-                <button onClick={handlePrev} style={{cursor: "pointer", opacity: currentIndex === 0 && ".6"}}>
+                <button
+                    onClick={handlePrev}
+                    style={{ cursor: "pointer", opacity: currentIndex === 0 ? ".6" : "1" }}
+                >
                     <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 1L1 9L9 17" stroke="white" />
                     </svg>
@@ -103,7 +111,10 @@ const EightSlider = () => {
                         ></div>
                     ))}
                 </div>
-                <button onClick={handleNext} style={{cursor: "pointer", opacity: currentIndex === 2 && ".6"}}>
+                <button
+                    onClick={handleNext}
+                    style={{ cursor: "pointer", opacity: currentIndex === items.length - 1 ? ".6" : "1" }}
+                >
                     <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L9 9L1 17" stroke="white" />
                     </svg>

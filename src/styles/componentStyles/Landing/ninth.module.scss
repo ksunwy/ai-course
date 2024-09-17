@@ -171,7 +171,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 20%;
+        left: 21%;
         z-index: 10;
         cursor: pointer;
         transition: transform 0.3s ease;
@@ -195,7 +195,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 5%;
+        right: 16%;
         z-index: 10;
         cursor: pointer;
         transition: transform 0.3s ease;
@@ -259,11 +259,38 @@
 
 .video {
     position: relative;
-    width: 482px;
-    height: 948px;
+    width: 35.95rem;
+    height: 76.78rem;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 50px; 
 
     @media screen and (width <= 850px) {
-        width: 200px;
-        height: 400px;
+        width: 180px;
+        height: 380px;
+        border-radius: 10px; 
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+
+.slide-content {
+    position: relative;
+}
+
+.phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__image {
+        position: relative;
+        width: 39.38rem;
+        height: 79.06rem;
+    
+        @media screen and (width <= 850px) {
+            width: 200px;
+            height: 400px;
+        }
     }
 }

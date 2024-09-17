@@ -56,10 +56,11 @@ const FifthSlider = () => {
                 ref={swiperRef}
                 modules={[Navigation, Pagination]}
                 {...swiperParams}
+                className={classes.slider__content}
             >
                 <SwiperSlide><SliderItem activeIndex={activeIndex} goNext={goNext} goPrev={goPrev} image={"/static/img/fifth/fifthFirstImage.png"} title={t('fifth__first-title')} subtitle={t('fifth__first-subtitle')} desc={t('fifth__first-desc')} /> </SwiperSlide>
                 <SwiperSlide><SliderItem activeIndex={activeIndex} goNext={goNext} goPrev={goPrev} image={"/static/img/fifth/fifthSecondImage.png"} title={t('fifth__second-title')} subtitle={t('fifth__second-subtitle')} desc={t('fifth__second-desc')} /> </SwiperSlide>
-                <SwiperSlide><SliderItem activeIndex={activeIndex} goNext={goNext} goPrev={goPrev} image={ windowWidth > 850 ? "/static/img/fifth/fifthThirdImageDesk.png" : "/static/img/fifth/fifthThirdImage.png"} title={t('fifth__third-title')} subtitle={t('fifth__third-subtitle')} desc={t('fifth__third-desc')} /> </SwiperSlide>
+                <SwiperSlide><SliderItem isThird activeIndex={activeIndex} goNext={goNext} goPrev={goPrev} image={"/static/img/fifth/fifthThirdImageDesk.png"} title={t('fifth__third-title')} subtitle={t('fifth__third-subtitle')} desc={t('fifth__third-desc')} /> </SwiperSlide>
                 <SwiperSlide><SliderItem activeIndex={activeIndex} goNext={goNext} goPrev={goPrev} image={ windowWidth > 850 ? "/static/img/fifth/fifthFourthImage — копия.png" : "/static/img/fifth/fifthFourthImage.png"} title={t('fifth__fourth-title')} subtitle={t('fifth__fourth-subtitle')} desc={t('fifth__fourth-desc')} /> </SwiperSlide>
                 <SwiperSlide><SliderItem activeIndex={activeIndex} goNext={goNext} goPrev={goPrev} image={"/static/img/fifth/fifthFifthImage.png"} title={t('fifth__fifth-title')} subtitle={t('fifth__fifth-subtitle')} desc={t('fifth__fifth-desc')} secondDesc={t('fifth__fifth-desc-second')} /> </SwiperSlide>
             </Swiper>

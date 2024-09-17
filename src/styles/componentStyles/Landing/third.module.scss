@@ -9,7 +9,7 @@
     @include width-restriction;
 
     @media screen and (width <=850px) {
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     &__blur {

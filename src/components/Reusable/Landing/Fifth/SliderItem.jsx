@@ -1,10 +1,15 @@
 import classes from "../../../../styles/componentStyles/Landing/fifth.module.scss";
 
 
-const SliderItem = ({ image, title, subtitle, desc, goNext, goPrev, activeIndex, secondDesc }) => {
+const SliderItem = ({ image, title, subtitle, desc, goNext, goPrev, activeIndex, secondDesc, isThird }) => {
     return (
         <div className={classes.fifth__first}>
-            <div className={classes.fifth__first__left}>
+            {isThird && (
+                <div className={`${classes.fifth__first__left} mobile`}>
+                    <img src={'/static/img/fifth/fifthThirdImage.png'} alt="image" width={"100%"} height={"100%"} />
+                </div>
+            )}
+            <div className={`${classes.fifth__first__left} ${isThird && "desktop"}`}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
             </div>
             <div className={classes.fifth__first__right}>

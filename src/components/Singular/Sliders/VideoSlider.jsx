@@ -69,6 +69,11 @@ const VideoSlider = ({ className }) => {
                             alt={slide.title}
                            className={classes.video}
                         />
+                        <div className={classes.phone}>
+                            <div className={classes.phone__image}>
+                                <img src="/static/img/ninth/phone.png" alt="phone" width={"100%"} height={"100%"} />
+                            </div>
+                        </div>
                     </div>
                 </SwiperSlide>
             ))}

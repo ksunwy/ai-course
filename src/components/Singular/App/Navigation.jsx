@@ -74,6 +74,11 @@ const Navigation = () => {
       </div>
 
       <div ref={dropdownSecondRef} style={{ display: 'none', overflow: 'hidden' }} className={`dropdown mobile ${classes.dropdown}`}>
+        <div className={classes.dropdown__bg}>
+          <div className={classes.dropdown__bg__image}>
+            <img src="/static/img/menuBg.png" alt="bg" width={"100%"} height={"100%"} />
+          </div>
+        </div>
         <LanguageSwitcher className={classes.mobileSwitcher} />
         <ul>
           {links.slice(0, -1).map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}

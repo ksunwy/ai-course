@@ -83,8 +83,20 @@
     flex-direction: column;
     gap: 30px;
 
-    // background: var(--color-black);
+    background: var(--color-black);
     padding-bottom: 34px;
+
+    &__bg {
+        position: absolute;
+        right: -16px;
+        bottom: 0;
+
+        &__image {
+            position: relative;
+            width: 398px;
+            height: 320px;
+        }
+    }
 
     &>ul {
         display: flex;
