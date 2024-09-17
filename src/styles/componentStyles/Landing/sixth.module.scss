@@ -55,7 +55,7 @@
         &__cards {
             display: flex;
             gap: 5.3rem;
-            min-height: 92.55rem;
+            min-height: 98.55rem;
 
             @media screen and (850px < width <=1083px) {
                 gap: 2rem;
@@ -517,6 +517,6 @@
 
 .last {
     @media screen and (width >850px) {
-        height: 102.55rem;
+        height: 98.55rem;
     }
 }
