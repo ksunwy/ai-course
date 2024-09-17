@@ -15,11 +15,16 @@ const Fourth = () => {
         {id: `03`, subtitle: `${t("fourth__third-subtitle")}`, text: `${t("fourth__third-desc")}`},
         {id: `04`, subtitle: `${t("fourth__fourth-subtitle")}`, text: `${t("fourth__fourth-desc")}`},
     ];
-
     const swiperParams = {
-        slidesPerView: 1.12,
+        slidesPerView: 1.2,
         spaceBetween: 20,
-    };
+        breakpoints: {
+          850: {
+            slidesPerView: 1.12,
+          },
+        },
+      };
+      
 
   return (
     <section className={classes.fourth}>

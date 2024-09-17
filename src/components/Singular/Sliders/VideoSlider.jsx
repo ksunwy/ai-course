@@ -49,13 +49,17 @@ const VideoSlider = ({ className }) => {
             grabCursor={true}
             centeredSlides={true}
             loop={true}
+            spaceBetween={-50}
             slidesPerView={2}
             {...swiperParams}
             coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
+                rotate: 0,         
+                stretch: 0,       
+                depth: 100,     
                 modifier: 2.5,
+                stretch: 25,     
+                scale: 0.9,      
+                slideShadows: false 
             }}
             modules={[EffectCoverflow, Pagination, Navigation]}
             className={`mySwiper ${classes.mySwiper} ${className}`}
