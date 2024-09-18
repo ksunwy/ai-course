@@ -11,14 +11,27 @@ import classes from "../../../styles/componentStyles/Landing/ninth.module.scss";
 const VideoSlider = ({ className }) => {
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(window?.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+  
+        window.addEventListener('resize', handleResize);
+        
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const slides = [
-        { id: 1, title: 'Slide 1', image: '/static/video/IMG_0791.gif' },
-        { id: 2, title: 'Slide 2', image: '/static/video/IMG_0792.gif' },
-        { id: 3, title: 'Slide 3', image: '/static/video/IMG_0793.gif' },
-        { id: 4, title: 'Slide 4', image: '/static/video/IMG_0795.gif' },
-        { id: 5, title: 'Slide 5', image: '/static/video/IMG_0796.gif' },
-        { id: 6, title: 'Slide 6', image: '/static/video/IMG_0797.gif' },
+        { id: 1, title: 'Slide 1', image: '/static/video/IMG_0791.gif', staticImage: '/static/img/ninth/static.png' },
+        { id: 2, title: 'Slide 2', image: '/static/video/IMG_0792.gif', staticImage: '/static/img/ninth/static1.png' },
+        { id: 3, title: 'Slide 3', image: '/static/video/IMG_0793.gif', staticImage: '/static/img/ninth/static2.png' },
+        { id: 4, title: 'Slide 4', image: '/static/video/IMG_0795.gif', staticImage: '/static/img/ninth/static3.png' },
+        { id: 5, title: 'Slide 5', image: '/static/video/IMG_0796.gif', staticImage: '/static/img/ninth/static4.png' },
+        { id: 6, title: 'Slide 6', image: '/static/video/IMG_0797.gif', staticImage: '/static/img/ninth/static5.png' },
     ];
 
     const goNext = () => {
@@ -53,25 +66,24 @@ const VideoSlider = ({ className }) => {
             slidesPerView={2}
             {...swiperParams}
             coverflowEffect={{
-                rotate: 0,         
-                stretch: 0,       
-                depth: 100,     
+                rotate: 0,
+                depth: 100,
                 modifier: 2.5,
-                stretch: 25,     
-                scale: 0.9,      
-                slideShadows: false 
+                stretch: windowWidth > 850 ? 25 : 12,
+                scale: 0.9,
+                slideShadows: false
             }}
             modules={[EffectCoverflow, Pagination, Navigation]}
             className={`mySwiper ${classes.mySwiper} ${className}`}
-            ref={swiperRef} 
-        >
-            {slides.map((slide) => (
+            ref={swiperRef}
+            >
+            {slides.map((slide, index) => (
                 <SwiperSlide key={slide.id}>
                     <div className={`slide-content ${classes['slide-content']}`}>
                         <img
-                            src={slide.image}
+                            src={activeIndex === index ? slide.image : slide.staticImage}
                             alt={slide.title}
-                           className={classes.video}
+                            className={classes.video}
                         />
                         <div className={classes.phone}>
                             <div className={classes.phone__image}>
