@@ -69,7 +69,7 @@ const VideoSlider = ({ className }) => {
                 rotate: 0,
                 depth: 100,
                 modifier: 2.5,
-                stretch: windowWidth > 850 ? 25 : 12,
+                stretch: windowWidth > 850 ? 24 : 12,
                 scale: 0.9,
                 slideShadows: false
             }}
@@ -78,8 +78,8 @@ const VideoSlider = ({ className }) => {
             ref={swiperRef}
             >
             {slides.map((slide, index) => (
-                <SwiperSlide key={slide.id}>
-                    <div className={`slide-content ${classes['slide-content']}`}>
+                <SwiperSlide key={slide.id} style={{filter: activeIndex === index ? null : "blur(5px) brightness(80%)"}}>
+                    <div className={`slide-content ${classes['slide-content']}`}> 
                         <img
                             src={activeIndex === index ? slide.image : slide.staticImage}
                             alt={slide.title}

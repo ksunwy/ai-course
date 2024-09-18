@@ -68,9 +68,9 @@ const Navigation = () => {
       <LanguageSwitcher className={"desktop"} />
 
       <div onClick={toggleDropdown} className={`mobile`}>
-        <button ref={arrowRef}>
+        <div ref={arrowRef}>
           <Options isOpen={isOpen} setIsOpen={setIsOpen} slideToggle={toggleDropdown} />
-        </button>
+        </div>
       </div>
 
       <div ref={dropdownSecondRef} style={{ display: 'none', overflow: 'hidden' }} className={`dropdown mobile ${classes.dropdown}`}>
@@ -83,7 +83,7 @@ const Navigation = () => {
         <ul>
           {links.slice(0, -1).map((el, i) => <li key={i}><a href={`#${el.link}`}>{el.text}</a></li>)}
         </ul>
-        <a href='https://t.me/yoraiacademy_bot' target='_blank'>{t('last__text-button')}</a>
+        <a className={classes.dropdown__link} style={{height: "44px"}} href='https://t.me/yoraiacademy_bot' target='_blank'>{t('last__text-button')}</a>
       </div>
     </nav>
   )
