@@ -1,13 +1,25 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import classes from "../../../../styles/componentStyles/Landing/sixth.module.scss";
 
 const Plan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, hoveredPlan }) => {
     const { t } = useTranslation();
 
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        if (hoveredPlan !== plan) {
+            setHoveredPlan(plan);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredPlan(null);
+    };
     return (
         <div
-            onMouseEnter={() => setHoveredPlan(price === 7900 ? t("sixth__third-title") : t("sixth__first-title"))}
-            onMouseLeave={() => setHoveredPlan(null)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             className={
                 hoveredPlan === plan ? `${classes.coolPlan} ${classes.last}` :
                     `${classes.plan}`}>
@@ -16,9 +28,10 @@ const Plan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, ho
                     classes.plan__image}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
             </div>
-            <div className={
-                hoveredPlan === plan ? classes.coolPlan__content :
-                    classes.plan__content}>
+            <div
+                className={
+                    hoveredPlan === plan ? classes.coolPlan__content :
+                        classes.plan__content}>
                 <div className={classes.plan__content__top}>
                     <div className={
                         hoveredPlan === plan ? classes.coolPlan__content__top__price :
