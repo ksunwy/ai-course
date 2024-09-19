@@ -114,7 +114,7 @@
     }
 
     &__content {
-        padding: 2.56rem 3.47rem;
+        padding: 3.1rem 3.47rem;
         padding-top: 0;
 
         display: flex;
@@ -262,10 +262,12 @@
         }
 
         &__bottom {
+            position: relative;
             display: flex;
             flex-direction: column;
             gap: 1.71rem;
             align-items: center;
+
             transition: all .3s;
 
             @media screen and (width <=850px) {
@@ -378,7 +380,7 @@
     }
 
     &__content {
-        padding: 3.42rem 4.62rem;
+        padding: 4.2rem 4.62rem;
         padding-top: 0;
 
         display: flex;

@@ -3,10 +3,20 @@ import classes from "../../../../styles/componentStyles/Landing/sixth.module.scs
 
 const CoolPlan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, hoveredPlan }) => {
     const { t } = useTranslation();
+    
+    const handleMouseEnter = () => {
+        setHoveredPlan(plan);
+    };
+
+    const handleMouseLeave = (event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+            setHoveredPlan(null);
+        }
+    };
     return (
         <div
-            onMouseEnter={() => setHoveredPlan(t("sixth__second-title"))}
-            onMouseLeave={() => setHoveredPlan(null)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             className={hoveredPlan === plan ? classes.coolPlan : classes.plan}>
             <div className={hoveredPlan === plan ? classes.coolPlan__image : classes.plan__image}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
