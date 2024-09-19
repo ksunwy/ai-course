@@ -1,18 +1,39 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import classes from "../../../../styles/componentStyles/Landing/sixth.module.scss";
 
 const CoolPlan = ({ image, list, plan, price, buttonText, places, setHoveredPlan, hoveredPlan }) => {
     const { t } = useTranslation();
-    
+
+   const [isHovered, setIsHovered] = useState(false);
+
     const handleMouseEnter = () => {
+        setIsHovered(true);
         setHoveredPlan(plan);
     };
 
-    const handleMouseLeave = (event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) {
-            setHoveredPlan(null);
-        }
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+        setTimeout(() => {
+            if (!isHovered) {
+                setHoveredPlan(null);
+            }
+        }, 100);
     };
+
+    const handleBottomMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleBottomMouseLeave = () => {
+        setIsHovered(false);
+        setTimeout(() => {
+            if (!isHovered) {
+                setHoveredPlan(null);
+            }
+        }, 100);
+    };
+
     return (
         <div
             onMouseEnter={handleMouseEnter}
@@ -21,7 +42,10 @@ const CoolPlan = ({ image, list, plan, price, buttonText, places, setHoveredPlan
             <div className={hoveredPlan === plan ? classes.coolPlan__image : classes.plan__image}>
                 <img src={image} alt="image" width={"100%"} height={"100%"} />
             </div>
-            <div className={hoveredPlan === plan ? classes.coolPlan__content : classes.plan__content}>
+            <div 
+            onMouseEnter={handleBottomMouseEnter}
+            onMouseLeave={handleBottomMouseLeave}
+            className={hoveredPlan === plan ? classes.coolPlan__content : classes.plan__content}>
                 <div className={classes.plan__content__top}>
                     <div className={hoveredPlan === plan ? classes.coolPlan__content__top__price : classes.plan__content__top__price}>
                         <span>{plan}</span>
