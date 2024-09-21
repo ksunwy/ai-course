@@ -262,16 +262,16 @@
 
 .video {
     position: relative;
-    width: 35.95rem;
-    height: 76.78rem;
+    width: 36.95rem;
+    height: 75.78rem;
     margin-left: 20px;
     margin-top: 20px;
     border-radius: 50px; 
 
     @media screen and (width <= 850px) {
-        width: 180px;
-        height: 380px;
-        border-radius: 10px; 
+        width: 202px;
+        height: 390px;
+        border-radius: 20px; 
         margin-left: 10px;
         margin-top: 10px;
     }
@@ -288,12 +288,12 @@
 
     &__image {
         position: relative;
-        width: 39.38rem;
-        height: 79.06rem;
+        width: 40.38rem;
+        height: 78.06rem;
     
         @media screen and (width <= 850px) {
-            width: 200px;
-            height: 400px;
+            width: 220px;
+            height: 410px;
         }
     }
 }
