@@ -29,7 +29,7 @@ const Sixth = () => {
         { text: `${t('sixth__seventh-list')}` },
         { text: `${t('sixth__eight-list')}` },
         { text: `${t('sixth__ninth-list')}` },
-        { text: `${t('sixth__tenth-list')}` },
+        // { text: `${t('sixth__tenth-list')}` },
         { text: `${t('sixth__fifth-list')}` },
     ];
     const [hoveredPlan, setHoveredPlan] = useState(t('sixth__second-title'));
